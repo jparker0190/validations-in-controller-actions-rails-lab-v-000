@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.new(post_params)
-   
+
       # Run the validations WITHOUT attempting to save to the database, returning
       # true if the Post is valid, and false if it's not.
       if @post.valid?
