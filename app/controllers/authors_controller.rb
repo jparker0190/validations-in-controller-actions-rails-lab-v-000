@@ -7,10 +7,10 @@ class AuthorsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
-      if @post.valid?
-        @post.save
-        redirect_to post_path(@post)
+    @author = Author.new(author_params)
+      if @author.valid?
+        @author.save
+        redirect_to post_path(@author)
       else
         render :new
       end
